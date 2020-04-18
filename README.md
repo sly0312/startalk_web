@@ -1,11 +1,4 @@
-<!--
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-05 14:54:16
- * @LastEditTime: 2019-08-19 11:05:32
- * @LastEditors: Please set LastEditors
- -->
- ## Startalk Web
+## Startalk Web
 ### 简介
 - Startalk Web是IM网页版聊天工具。
 - Startalk Web依赖[后端服务](https://github.com/qunarcorp/ejabberd-open)，否则无法正常使用该工具。
@@ -83,6 +76,13 @@
 - 项目预览：
     - 项目启动成功后，在电脑浏览器中输入 [本机IP:8080/web],回车键访问，输入测试账号登录，（测试账号admin，密码testpassword）
     - 至此，您便可享用web版及时通信聊天工具。
+
+### 常见问题
+**A**: 登录页面点击登录按钮后一直处于loading状态?
+
+**Q**: 如果使用了旧版本的 im_http_service, 可能会出现此问题。 **(建议升级im_http_service)**
+
+解决方案： 修改 **/startalk/tomcat/im_http_service/webapps/im_http_service/WEB-INF/classes/nav.json** 文件, 在 `baseaddess` 字段下增加 `"socketurl": "ws://[your ip]:5280/websocket"` 字段
 
 ### 注意
 #### 注意事项
