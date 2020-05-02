@@ -45,7 +45,7 @@
 - 在 /startalk/download 目录下下载源码,然后将项目 /dist 目录下文件copy到 /startalk/startalk_web 目录下。
 ```
     cd /startalk/download
-    git clone https://github.com/qunarcorp/startalk_web.git
+    git clone https://github.com/startalkIM/startalk_web.git
     cp -rf startalk_web/dist /startalk/startalk_web
 ```
 #### 修改配置
